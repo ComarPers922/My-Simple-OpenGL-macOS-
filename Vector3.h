@@ -22,6 +22,7 @@ public:
     Vector3 operator+(const Vector3 &v2);
     Vector3 operator-(const Vector3 &v2);
     Vector3 operator*(const float scalar);
+    void operator*=(const float scalar);
     void operator+=(const Vector3 &v2);
     void operator=(const Vector3 &v2);
 	~Vector3();

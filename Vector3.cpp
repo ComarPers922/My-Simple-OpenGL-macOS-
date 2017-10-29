@@ -39,9 +39,18 @@ void Vector3::operator+=(const Vector3 &v2)
     this->y += v2.y;
     this->z += v2.z;
 }
-
+void Vector3::operator*=(const float scalar)
+{
+    this->x *= scalar;
+    this->y *= scalar;
+    this->z *= scalar;
+}
 float Vector3::operator[](const int index)
 {
+    if(index >= 2)
+    {
+        return -1;
+    }
     return this->member[index];
 }
 Vector3 Vector3::normalized()
